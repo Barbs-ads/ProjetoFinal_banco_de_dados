@@ -114,7 +114,7 @@ Inclui:
 - Definição de relacionamentos  
 - Definição de atributos multivalorados através de tabelas auxiliares  
 - Aplicação de chaves primárias, estrangeiras e restrições  
-
+[Clique aqui para ver a Modelagem Física em PDF](./modelagem_fisica/modelagem_fisica.pdf)
 ---
 
 ## 📊 Dados
