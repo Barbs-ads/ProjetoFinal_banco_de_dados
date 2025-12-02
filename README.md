@@ -25,7 +25,7 @@ O novo sistema deve:
 - Registrar consultas e medicamentos com datas confiáveis.
 - Reduzir retrabalho e estresse dos animais.
 
-[Clique aqui para ver a Modelagem Física em PDF](banco_dados/cenario/Cenário.pdf)
+[Clique aqui para ver a o Cenário completo em PDF](banco_dados/cenario/Cenário.pdf)
 
 ---
 
@@ -129,7 +129,7 @@ Exemplos de dados previstos no sistema:
 - Associação do gato aos veterinários que o atenderam  
 - Lista de medicamentos utilizados pelo gato ao longo da vida
 
-[Clique aqui para ver a Modelagem Física em PDF](banco_dados/dados_tabelas/dados_tabelas.pdf)
+[Clique aqui para ver as inserções dos dados em PDF](banco_dados/dados_tabelas/dados_tabelas.pdf)
 
 ---
 
@@ -147,7 +147,7 @@ Atualização de dados como endereço, telefone, status FIV/FELV, reforço de va
 ### **DELETE**  
 Exclusão de registros respeitando integridade referencial do banco.
 
-[Clique aqui para ver a Modelagem Física em PDF](banco_dados/crud/crud.pdf)
+[Clique aqui para ver as operações CRUD em PDF](banco_dados/crud/crud.pdf)
 
 ---
 
