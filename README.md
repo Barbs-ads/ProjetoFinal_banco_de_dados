@@ -1,29 +1,23 @@
-# 🐱 Clínica Veterinária Gatices – Sistema de Gestão Exclusivo para Gatos
+# 😸 Sistema de Clínica Veterinária Gatices
 
-## 📌 Cenário
+Este repositório contém a documentação e os scripts SQL para a Clínica Veterinária **Gatices**, um sistema desenvolvido para um ambiente *Cat Friendly* (exclusivo para felinos).
 
-### **Sistema de Clínica Veterinária Exclusiva para Gatos**
+---
 
-A clínica **Gatices**, certificada com o selo *Cat Friendly*, oferece um ambiente totalmente voltado ao bem-estar dos felinos — sem latidos, cheiros de cães ou estímulos que gerem estresse.  
-Apesar do atendimento de excelência, o controle de informações ainda é feito em papel, trazendo diversos riscos.
+## 1. Cenário
 
-### **Problemas Identificados**
+### 1.1 Descrição
+A **Gatices** é uma clínica veterinária exclusiva para gatos, com selo *Cat Friendly*, oferecendo ambiente livre de estresse, sem latidos ou cheiro de cães.
 
-- **Dificuldade de Identificação:**  
-  Muitos gatos têm o mesmo nome e mesma cor, gerando confusões perigosas.
-- **Controle de Vacinas Vulnerável:**  
-  As vacinas V3, V4, V5 e testes FIV/FELV exigem rigor nos prazos, mas com anotações manuais os reforços podem ser esquecidos.
-- **Contato Emergencial Insuficiente:**  
-  O cadastro atual permite apenas um telefone, mas quando o tutor viaja o gato fica sem novo contato registrado.
+### 1.2 O Problema
+A gestão de dados atual é precária e baseada em papéis, gerando riscos:
+* **Identificação:** Confusão entre gatos com nomes e pelagens semelhantes.
+* **Controle de Vacinas:** Perda de prazos para reforços (V3, V4, V5, FIV/FELV), deixando os animais vulneráveis.
+* **Contato:** O cadastro atual limita-se a um único telefone, dificultando o contato em emergências quando o tutor viaja.
 
-### **Necessidade da Clínica**
+### 1.3 A Necessidade
+O sistema visa resolver essas questões focando nas particularidades dos felinos, garantindo identificação correta, controle de múltiplos telefones de contato e centralização do histórico médico.
 
-O novo sistema deve:
-- Garantir identificação precisa dos gatos.
-- Permitir múltiplos telefones e e-mails do tutor.
-- Centralizar todo o histórico médico.
-- Registrar consultas e medicamentos com datas confiáveis.
-- Reduzir retrabalho e estresse dos animais.
 
 [Clique aqui para ver a o Cenário completo em PDF](banco_dados/cenario/Cenário.pdf)
 
@@ -33,38 +27,79 @@ O novo sistema deve:
 
 ### **Entidades e Atributos**
 
-#### **TUTOR**
+## **TUTOR**
 - id_tutor (PK)
-- CPF_tutor (único)
+- CPF_tutor
 - nome_tutor
-- emails (multivalorado)
-- telefones (multivalorado)
-- logradouro_tutor
-- bairro_tutor
-- numero_tutor
-
-#### **GATO**
+- logradouro, bairro, numero (Endereço)
+  
+## **TELEFONE_TUTOR** 
+- id_telefone (PK)
+- id_tutor (FK)
+- telefone_tutor
+- tipo_contato_tutor
+  
+## **EMAIL_TUTOR**
+- id_email (PK)
+- id_tutor (FK)
+- email_tutor
+  
+## **GATO**
 - id_gato (PK)
+- id_tutor (FK)
 - nome_gato
 - raca_gato
 - cor_gato
 - dataNasc_gato
-- idade (derivada)
+- idade (derivado)
 
-#### **VETERINARIO**
+## **PRONTUARIO**
+- id_prontuario (PK)
+- id_gato (FK)
+- alergias_prontuario 
+- observacoes_gerais_prontuario
+- 
+## **CONSULTA** 
+- id_consulta (PK)
+- id_prontuario (FK)
+- id_veterinario (FK)
+- data_consulta 
+- motivo_consulta
+- peso_atual_consulta
+- status_fivfelv_consulta
+- diagnostico_consulta
+
+## **VACINA** 
+- id_vacina (PK)
+- nome_vacina 
+- fabricante_vacina
+- reforco_dias_vacina
+
+## **GATO_VACINA** 
+- (id_gato, id_vacina) (PK)
+- id_gato (FK)
+- id_vacina (FK)
+- dataAplicacao_vacina
+- dataReforco_vacina
+- lote_vacina
+
+## **VETERINARIO**
 - id_veterinario (PK)
 - nome_veterinario
 - especialidade_veterinario
 
-#### **MEDICAMENTO**
+## **MEDICAMENTO**
 - id_medicamento (PK)
 - nome_medicamento
-- dosagem_medicamento
+- princAtiv_medicamento
 
-#### **PRONTUARIO**
-- id_prontuario (PK)
-- dataConsulta_prontuario
-- status_fivfelv_prontuario
+## **CONSULTA_MEDICAMENTO**
+- (id_consulta, id_medicamento) (PK) 
+- id_consulta (FK)
+- id_medicamento (FK)
+- dose_medicamento
+- frequenciaUso_medicamento
+
 
 ### **Relacionamentos**
 
