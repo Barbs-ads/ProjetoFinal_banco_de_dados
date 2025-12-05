@@ -80,7 +80,7 @@ O sistema visa resolver essas questões focando nas particularidades dos felinos
 | 2 | GATO | PRONTUARIO | 1 : 1 | Cada gato tem um único prontuário e um prontuario é referente somente a um gato | 
 | 3 | PRONTUARIO | CONSULTA | 1 : N | Um prontuário pode ter várias consultas e uma consulta especifica fica registrada em somente um prontuário |
 | 4 | VETERINARIO | CONSULTA | 1 : N | Um veterinário realiza várias consultas  | 
-| 5 | GATO | VACINA | N : N | Um gato pode receber várias doses de vacinas e um tpo de vacina pode ser aplicado em diversos gatos | 
+| 5 | GATO | VACINA | N : N | Um gato pode receber várias doses de vacinas e um tipo de vacina pode ser aplicado em diversos gatos | 
 | 6 | CONSULTA | MEDICAMENTO | N : N | Uma consulta pode ter vários medicamentos prescritos e um medicamento pode ser usado em várias consultas |
 
 
@@ -196,7 +196,7 @@ Vizualize o MER feito do Draw.io [Modelo de Entidade Relacional](https://viewer.
 A Modelagem Física consiste na transformação das tabelas acima em comandos SQL de criação, relacionamento e restrições (PK, FK, UNIQUE).  
 Inclui:
 
-- Criação do banco de dados  
+- Criação do banco de dados Gatices 
 - Criação das tabelas  
 - Definição de relacionamentos  
 - Definição de atributos multivalorados através de tabelas auxiliares  
