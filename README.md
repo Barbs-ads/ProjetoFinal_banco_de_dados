@@ -19,7 +19,7 @@ A gestão de dados atual é precária e baseada em papéis, gerando riscos:
 O sistema visa resolver essas questões focando nas particularidades dos felinos, garantindo identificação correta, controle de múltiplos telefones de contato e centralização do histórico médico.
 
 
-[Clique aqui para ver a o Cenário completo em PDF](banco_dados/cenario/Cenário.pdf)
+[Clique aqui para ver a o Cenário completo em PDF](banco_dados/cenario2.0.pdf)
 
 ---
 
@@ -195,7 +195,7 @@ Inclui:
 - Definição de relacionamentos  
 - Definição de atributos multivalorados através de tabelas auxiliares  
 - Aplicação de chaves primárias, estrangeiras e restrições  
-[Clique aqui para ver a Modelagem Física em PDF](banco_dados/modelagem_fisica/modelagem_fisica.pdf)
+[Clique aqui para ver a Modelagem Física em PDF](banco_dados/modelagem_fisica2.0.pdf)
 ---
 
 ## 📊 Dados
@@ -208,7 +208,7 @@ Exemplos de dados previstos no sistema:
 - Associação do gato aos veterinários que o atenderam  
 - Lista de medicamentos utilizados pelo gato ao longo da vida
 
-[Clique aqui para ver as inserções dos dados em PDF](banco_dados/dados_tabelas/dados_tabelas.pdf)
+[Clique aqui para ver as inserções dos dados em PDF](banco_dados/dados_tabelas2.0.pdf)
 
 ---
 
@@ -226,7 +226,7 @@ Atualização de dados como endereço, telefone, status FIV/FELV, reforço de va
 ### **DELETE**  
 Exclusão de registros respeitando integridade referencial do banco.
 
-[Clique aqui para ver as operações CRUD em PDF](banco_dados/crud/crud.pdf)
+[Clique aqui para ver as operações CRUD em PDF](banco_dados/crud2.0.pdf)
 
 ---
 
@@ -241,4 +241,4 @@ O sistema deve fornecer relatórios como:
 - Medicamentos já aplicados ao longo da vida  
 - Agenda de consultas (ordenada por data)  
 
-[Clique aqui para ver a Modelagem Física em PDF](banco_dados/relatorio/relatorio.pdf)
+[Clique aqui para ver a Modelagem Física em PDF](banco_dados/relatorio2.0.pdf)
